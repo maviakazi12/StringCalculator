@@ -1,0 +1,14 @@
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/StringCalculatorKata.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/StringCalculatorKata.AssemblyInfoInputs.cache
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/StringCalculatorKata.AssemblyInfo.cs
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/StringCalculatorKata.csproj.CoreCompileInputs.cache
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/bin/Debug/net9.0/StringCalculatorKata
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/bin/Debug/net9.0/StringCalculatorKata.deps.json
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/bin/Debug/net9.0/StringCalculatorKata.runtimeconfig.json
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/bin/Debug/net9.0/StringCalculatorKata.dll
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/bin/Debug/net9.0/StringCalculatorKata.pdb
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/StringCalculatorKata.dll
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/refint/StringCalculatorKata.dll
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/StringCalculatorKata.pdb
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/StringCalculatorKata.genruntimeconfig.cache
+/Users/Mavia.Kazi/Documents/Acceleration/stringcalculatorkata/StringCalculatorKata/obj/Debug/net9.0/ref/StringCalculatorKata.dll
