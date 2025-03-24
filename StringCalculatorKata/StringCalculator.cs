@@ -25,8 +25,12 @@ public class StringCalculator
                     negativeNumbers.Add(resultNumber);
                 }
                 else
-                {
+                {   if (resultNumber>= 1000){
+                    continue;
+                }else{
                     sum += resultNumber;
+                }
+                    
                 }
             }
         }
