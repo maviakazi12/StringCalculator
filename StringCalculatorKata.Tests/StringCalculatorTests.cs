@@ -19,7 +19,7 @@ public class StringCalculatorKata
     {
         var stringCalculator = new StringCalculator();
         //Act
-        var result = Assert.Throws<ArgumentException>(()=>stringCalculator.add("-1,-2,-3"));
+        var result = Assert.Throws<ArgumentException>(() => stringCalculator.add("-1,2,-3"));
         //Assert
         Assert.Equal("Negatives not allowed: -1, -3", result.Message);
     }
@@ -28,7 +28,7 @@ public class StringCalculatorKata
     [InlineData("1", 1)]
     [InlineData("1,2", 3)]
     [InlineData("3\n5\n3,9", 20)]
-    [InlineData("-1,2,-3", 3)]
+    [InlineData("1000,1001,2", 2)]
     public void Takes_One_NumberString_And_Returns_It_As_A_Number(string numbers, int expectedResult)
     {
 
