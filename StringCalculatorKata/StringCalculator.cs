@@ -1,19 +1,37 @@
 public class StringCalculator
 {
-    public int add(string numbers)
+    public int Add(string numbers)
     {
+        string delimeter;
+        List<string> result = new List<string>();
+        int start = 0;
+        int end = 0;
         if (numbers == "") return 0;
-        if (numbers.Contains("//"))
+        if (numbers.StartsWith("//"))
         {
-            char[] charsToRemove = { '/', '\\', '\n' };
-            string newNumbers = new string(numbers.Where(c => !charsToRemove.Contains(c)).ToArray());
-            numbers = newNumbers;
+            if (numbers.Contains("[")&& numbers.Contains("]")){
+                start = numbers.IndexOf("[") + 1;
+                end = numbers.IndexOf("]");
+            }else{
+                start = numbers.IndexOf("//")+2;
+                end = numbers.IndexOf('\n');
+            }
+            
+            delimeter = numbers.Substring(start, end - start);
+            char[] charsToRemove = { '/', '\\', '\n', '[', ']' };
+            string newNumbers = new string(numbers.Where(n => !charsToRemove.Contains(n)).ToArray());
+            result = newNumbers.Split(new string[] { delimeter }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            // numbers = newNumbers;
         }
-
-        List<string> result = numbers
+        ;
+        if (!result.Any())
+        {
+            result = numbers
         .Split(',', '\n', ';').ToList()
         .Where(s => !string.IsNullOrWhiteSpace(s))
         .ToList();
+        }
+
         int sum = 0;
         List<int> negativeNumbers = new List<int>();
         foreach (var num in result)
@@ -25,12 +43,16 @@ public class StringCalculator
                     negativeNumbers.Add(resultNumber);
                 }
                 else
-                {   if (resultNumber>= 1000){
-                    continue;
-                }else{
-                    sum += resultNumber;
-                }
-                    
+                {
+                    if (resultNumber >= 1000)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        sum += resultNumber;
+                    }
+
                 }
             }
         }
