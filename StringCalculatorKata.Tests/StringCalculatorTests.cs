@@ -33,6 +33,7 @@ public class StringCalculatorKata
     [InlineData("//[***]\n1***2***3", 6)]
     [InlineData("//[*][%]\n1*2%3", 6)]
     [InlineData("//[***][#][%]\n1***2#3%4", 10)]
+    [InlineData("//[*1*][%]\n1*1*2%3", 6)]
     public void Takes_One_NumberString_And_Returns_It_As_A_Number(string numbers, int expectedResult)
     {
 
