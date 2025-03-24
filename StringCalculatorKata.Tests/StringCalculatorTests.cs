@@ -31,6 +31,8 @@ public class StringCalculatorKata
     [InlineData("//;\n1;2", 3)]
     [InlineData("1000,1001,2", 2)]
     [InlineData("//[***]\n1***2***3", 6)]
+    [InlineData("//[*][%]\n1*2%3", 6)]
+    [InlineData("//[***][#][%]\n1***2#3%4", 10)]
     public void Takes_One_NumberString_And_Returns_It_As_A_Number(string numbers, int expectedResult)
     {
 

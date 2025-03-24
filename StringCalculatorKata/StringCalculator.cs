@@ -1,26 +1,36 @@
+using System.Text.RegularExpressions;
 public class StringCalculator
 {
     public int Add(string numbers)
     {
-        string delimeter;
+        List<string> delimiter = new List<string>();
         List<string> result = new List<string>();
         int start = 0;
         int end = 0;
         if (numbers == "") return 0;
         if (numbers.StartsWith("//"))
         {
-            if (numbers.Contains("[")&& numbers.Contains("]")){
-                start = numbers.IndexOf("[") + 1;
-                end = numbers.IndexOf("]");
-            }else{
-                start = numbers.IndexOf("//")+2;
+            if (numbers.Contains("[") && numbers.Contains("]"))
+            {
+                string pattern = @"\[(.*?)\]";
+                MatchCollection matches= Regex.Matches(numbers, pattern);
+                foreach(Match match in matches){
+                    delimiter.Add(match.Groups[1].Value );
+                }
+                // start = numbers.IndexOf("[") + 1;
+                // end = numbers.IndexOf("]");
+            }
+            else
+            {
+                start = numbers.IndexOf("//") + 2;
                 end = numbers.IndexOf('\n');
             }
-            
-            delimeter = numbers.Substring(start, end - start);
+
+            string singleDelimiter = numbers.Substring(start, end - start);
+            delimiter.Add(singleDelimiter);
             char[] charsToRemove = { '/', '\\', '\n', '[', ']' };
             string newNumbers = new string(numbers.Where(n => !charsToRemove.Contains(n)).ToArray());
-            result = newNumbers.Split(new string[] { delimeter }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            result = newNumbers.Split(delimiter.ToArray(), StringSplitOptions.RemoveEmptyEntries).ToList();
             // numbers = newNumbers;
         }
         ;
